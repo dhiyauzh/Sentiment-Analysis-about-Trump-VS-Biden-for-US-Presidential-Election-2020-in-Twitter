@@ -16,8 +16,10 @@ Number of Tweets             |  Number of Likes
 During the exploratory data analysis phase, I found that Trump had more tweets (971k) talking about him compared to Biden, who had 775k tweets. However, despite the difference in the number of tweets, Biden-related tweets had more likes than those related to Trump. 
 
 ![image](https://user-images.githubusercontent.com/82467138/232245498-8ac55755-fe72-4f76-b194-785d911e91f2.png)
-A vast majority of the tweets were created by users from the United States with 394k number of tweets, followed by the United Kingdom (58k), India (40k), and Germany (35k).
 
-
+A vast majority of the tweets were created by users from the United States with 394k number of tweets, followed by the United Kingdom (58k), India (40k), and Germany (35k). From the graph below we can see the comparison of the origin countries of users that tweet about Trump and Biden. Additionaly, we can also see both candidates' popularity in the US States represented by the number of tweets of candidates.
+Tweets about each candidates in various countries            |  Tweets about each candidates in the US States 
+:-------------------------:|:-------------------------:
+![image](https://user-images.githubusercontent.com/82467138/232245997-d02a661d-258f-4f61-9523-3856e818a889.png)  |  ![image](https://user-images.githubusercontent.com/82467138/232246027-e83b8afa-de3b-4e69-a1d6-ba014b7eb680.png)
 
 ## Result
