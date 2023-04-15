@@ -5,7 +5,7 @@ Sentiment analysis from Twitter users on Trump VS Biden presidential election in
 This project is done to complete the final exam of my machine learning course. Social media such as Twitter has become a place that is often used by people to express themselves in everyday life, including political affairs. Social media can be the right place for politicians to capture aspirations, campaigns, and lead opinions. This project aims to identify Twitter users' opinions on each presidential candidate, Trump and Biden, on the Twitter platform. I also want to see how much support through the positive sentiment of one candidate is in line with the candidate's victory in the 2020 United States Election.
 I utilized a US Election 2020 Tweets dataset (https://www.kaggle.com/datasets/manchunhui/us-election-2020-tweets) from Kaggle. Tweets collected using the Twitter API with the timeframe started from 15th October 2020 until 8th November 2020. In total, the dataset contains roughly 1.7 million rows of data. The data was analyzed using LSTM Model to build the predictor. 
 
-## Data Pre-processing
+## Data Cleaning
 I began by combining two tables that contained tweets related to Trump and Biden into a single table. Next, I focused on cleaning the data, which involved various steps such as case folding the tweets, removing non-ASCII characters, mentions, hashtags, links, and URLs. Additionally, I removed any numbers that were mentioned in the tweets. To further clean the data, I created two functions that removed both whitespace and punctuation. Finally, I extended contraction words such as "i'd like" to "I would like" in order to ensure that the model could accurately understand the meaning of the text. By taking these steps, I was able to prepare the data for analysis and modeling.
 
 ## Exploratory Data Analysis
@@ -18,8 +18,13 @@ During the exploratory data analysis phase, I found that Trump had more tweets (
 ![image](https://user-images.githubusercontent.com/82467138/232245498-8ac55755-fe72-4f76-b194-785d911e91f2.png)
 
 A vast majority of the tweets were created by users from the United States with 394k number of tweets, followed by the United Kingdom (58k), India (40k), and Germany (35k). From the graph below we can see the comparison of the origin countries of users that tweet about Trump and Biden. Additionaly, we can also see both candidates' popularity in the US States represented by the number of tweets of candidates.
-Tweets about each candidates in various countries            |  Tweets about each candidates in the US States 
+Top 10 tweets about each candidates in various countries            |  Top 10 tweets about each candidates in the US States 
 :-------------------------:|:-------------------------:
 ![image](https://user-images.githubusercontent.com/82467138/232245997-d02a661d-258f-4f61-9523-3856e818a889.png)  |  ![image](https://user-images.githubusercontent.com/82467138/232246027-e83b8afa-de3b-4e69-a1d6-ba014b7eb680.png)
 
+## Model Creation
+As a part of the data preprocessing step, I created three new columns in the dataset, which include the polarity score, tweet length, and word count. The polarity score was based on the criteria of negative (0), neutral (1), and positive (2). Following this, I used the PorterStemmer package to stem the data and Tokenizer from TensorFlow Keras to tokenize the data. The Tokenizer converts words into numerical data, which is then fed into the neural network. This preprocessed data is then used for model training and evaluation. 80% of the data is used as training dataset while the rest is for the test dataset. The performance of the model was evaluated using a confusion matrix, which provided insights into the accuracy of the model's predictions. The final model has an accuracy of 86,74%.
+![image](https://user-images.githubusercontent.com/82467138/232247686-b9838507-f992-4629-bdaa-451b9e8db369.png)
+
 ## Result
+
